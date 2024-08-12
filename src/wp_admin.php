@@ -79,6 +79,15 @@ class WPCOMWPAdmin {
 			wp_register_style('bvwpcom_form-styles', plugins_url('assets/css/style.css', __FILE__));
 			wp_enqueue_style('bvwpcommdil', plugins_url('assets/css/mdil.min.css', __FILE__));
 			wp_enqueue_style('bvwpcom_form-styles');
+
+			if ( $this->getStaticPage() ) {
+				wp_enqueue_style(
+					'bvwpcom-static-styles',
+					plugins_url( 'assets/css/static/style.css', __FILE__ ),
+					[],
+					$this->bvinfo->version
+				);
+			}
 		}
 	}
 
@@ -96,6 +105,10 @@ class WPCOMWPAdmin {
 			return $brand['webpage'];
 		}
 		return $this->bvinfo->webpage;
+	}
+
+	private function getStaticPage() {
+		return $_GET['static'] ?? null;
 	}
 
 	public function siteInfoTags() {
@@ -129,7 +142,13 @@ class WPCOMWPAdmin {
 	}
 
 	public function adminPage() {
-		require_once dirname( __FILE__ ) . '/admin/main_page.php';
+		$static_page = $this->getStaticPage();
+
+		if ( $static_page ) {
+			require_once __DIR__ . '/admin/static/' . sanitize_file_name( $_GET[ 'static' ] ) . '.php';
+		} else {
+			require_once __DIR__ . '/admin/main_page.php';
+		}
 	}
 
 	public function initWhitelabel($plugins) {

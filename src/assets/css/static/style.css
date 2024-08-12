@@ -1,0 +1,19 @@
+.wpcom-migration-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.wpcom-migration-header__wpcom-logo {
+	font-size: 24px;
+}
+
+.wpcom-migration-header__blogvault-logo {
+	height: 24px;
+}
+
+.wpcom-migration-container {
+	display: flex;
+	margin: auto;
+	max-width: 886px;
+}

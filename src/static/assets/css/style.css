@@ -4,11 +4,13 @@
 	padding: 20px;
 }
 
-.wpcom-migration-header__wpcom-logo {
+.wpcom-migration-header__wpcom-logo span {
+	width: 24px;
+	height: 24px;
 	font-size: 24px;
 }
 
-.wpcom-migration-header__blogvault-logo {
+.wpcom-migration-header__blogvault-logo img {
 	height: 24px;
 }
 
@@ -16,4 +18,10 @@
 	display: flex;
 	margin: auto;
 	max-width: 886px;
+}
+
+@media ( min-width: 961px ) {
+	.wpcom-migration-container {
+		padding-top: 100px;
+	}
 }

@@ -83,7 +83,7 @@ class WPCOMWPAdmin {
 			if ( $this->getStaticPage() ) {
 				wp_enqueue_style(
 					'bvwpcom-static-styles',
-					plugins_url( 'assets/css/static/style.css', __FILE__ ),
+					plugins_url( 'static/assets/css/style.css', __FILE__ ),
 					[],
 					$this->bvinfo->version
 				);
@@ -145,7 +145,7 @@ class WPCOMWPAdmin {
 		$static_page = $this->getStaticPage();
 
 		if ( $static_page ) {
-			require_once __DIR__ . '/admin/static/' . sanitize_file_name( $_GET[ 'static' ] ) . '.php';
+			require_once __DIR__ . '/static/' . sanitize_file_name( $_GET[ 'static' ] ) . '.php';
 		} else {
 			require_once __DIR__ . '/admin/main_page.php';
 		}

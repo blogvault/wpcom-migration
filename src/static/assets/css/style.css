@@ -1,13 +1,9 @@
-/* Fonts */
-@font-face {
-    font-family: 'Recoleta';
-    src: url('../fonts/recoleta-regular-webfont.woff2') format('woff2'),
-         url('../fonts/recoleta-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import 'variables.css';
+@import 'fonts.css';
 
-/* Header */
+/*
+ * Header
+ */
 .wpcom-migration-header {
 	display: flex;
 	justify-content: space-between;
@@ -24,7 +20,9 @@
 	height: 24px;
 }
 
-/* Container */
+/*
+ * Container
+ */
 .wpcom-migration-container {
 	display: flex;
 	flex-direction: column;
@@ -35,7 +33,7 @@
 	padding: 40px;
 	gap: 40px;
 	font-size: 14px;
-	color: #3C434A;
+	color: var( --wpcom-migration-gray-70 );
 }
 
 .wpcom-migration-container > * {
@@ -49,24 +47,28 @@
 
 .wpcom-migration-container h1 {
 	margin: 0;
-	color: #101517;
-	font-family: Recoleta, "Noto Serif", Georgia, "Times New Roman", Times, serif;
+	color: var( --wpcom-migration-gray-100 );
+	font-family: var( --wpcom-migration-heading-font-family );
 	font-size: 34px;
 	font-weight: normal;
 	line-height: 1.2;
 }
 
-/* Content */
+/*
+ * Content
+ */
 .wpcom-migration-content {
 	max-width: 436px;
 }
 
-/* Sidebar */
+/*
+ * Sidebar
+ */
 .wpcom-migration-sidebar {
 	max-width: 340px;
 	padding: 40px;
 	border-radius: 4px;
-	background: #EFF1FC;
+	background: var( --wpcom-migration-secondary-bg );
 	color: #000;
 }
 
@@ -82,13 +84,15 @@
 	line-height: 1.3;
 }
 
-/* Form */
+/*
+ * Form
+ */
 .wpcom-migration-form button {
 	padding: 12px 24px;
 	border: 0;
 	border-radius: 4px;
 	color: #FDFDFD;
-	background: #3858E9;
+	background: var( --wpcom-migration-primary-bg );
 	cursor: pointer;
 }
 
@@ -96,7 +100,9 @@
 	opacity: 0.8;
 }
 
-/* Input Group */
+/*
+ * Input Group
+ */
 .wpcom-migration-input-group {
 	display: flex;
 	flex-direction: column;
@@ -112,7 +118,7 @@
 	padding: 10px 16px;
 	margin: 6px 0 0;
 	line-height: initial;
-	border: 1px solid #C3C4C7;
+	border: 1px solid var( --wpcom-migration-gray-10 );
 	border-radius: 2px;
 	box-shadow: none;
 }
@@ -128,26 +134,28 @@
 }
 
 .wpcom-migration-input-group--checkbox label {
-	color: #50575E;
+	color: var( --wpcom-migration-gray-60 );
 	font-weight: normal;
 	line-height: 20px;
 }
 
 .wpcom-migration-input-group--checkbox label a {
-	color: #50575E;
+	color: var( --wpcom-migration-gray-60 );
 }
 
 .wpcom-migration-input-group--checkbox label a:hover {
-	color: #135e96;
+	color: var( --wpcom-migration-link-hover-color );
 }
 
-/* Testimonial */
+/*
+ * Testimonial
+ */
 .wpcom-migration-testimonial {
 	margin-top: 32px;
 }
 
 .wpcom-migration-testimonial__text {
-	color: #101517;
+	color: var( --wpcom-migration-gray-100 );
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 1.7;
@@ -158,16 +166,14 @@
 	margin-top: 8px;
 }
 
-/* Misc */
-.wpcom-migration-section {
-	margin-top: 24px;
-}
-
+/*
+ * CTA Link
+ */
 .wpcom-migration-cta-link {
 	display: flex;
-    align-items: center;
+	align-items: center;
 	margin-top: 18px;
-	color: #101517;
+	color: var( --wpcom-migration-gray-100 );
 	font-weight: 500;
 	line-height: 1.4;
 }
@@ -179,7 +185,21 @@
 	margin-left: 8px;
 }
 
-/* Media Queries */
+/**
+ * Misc
+ */
+.wpcom-migration-section {
+	margin-top: 24px;
+}
+
+/* Fix main content having extra padding on mobile. */
+.toplevel_page_automattic.auto-fold #wpcontent {
+	padding-left: 0;
+}
+
+/*
+ * Media Queries
+ */
 @media ( min-width: 961px ) {
 	.wpcom-migration-container {
 		padding-top: 100px;
@@ -194,12 +214,5 @@
 	.wpcom-migration-container {
 		flex-direction: row;
 		align-items: start;
-	}
-}
-
-@media ( max-width: 782px ) {
-	/* Fix main content having extra padding on mobile. */
-	.toplevel_page_automattic.auto-fold #wpcontent {
-		padding-left: 0;
 	}
 }

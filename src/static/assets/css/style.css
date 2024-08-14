@@ -1,3 +1,13 @@
+/* Fonts */
+@font-face {
+    font-family: 'Recoleta';
+    src: url('../fonts/recoleta-regular-webfont.woff2') format('woff2'),
+         url('../fonts/recoleta-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header */
 .wpcom-migration-header {
 	display: flex;
 	justify-content: space-between;
@@ -14,14 +24,182 @@
 	height: 24px;
 }
 
+/* Container */
 .wpcom-migration-container {
 	display: flex;
-	margin: auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
 	max-width: 886px;
+	margin: auto;
+	padding: 40px;
+	gap: 40px;
+	font-size: 14px;
+	color: #3C434A;
 }
 
+.wpcom-migration-container > * {
+	box-sizing: border-box;
+}
+
+.wpcom-migration-container p {
+	margin: 8px 0;
+	font-size: inherit;
+}
+
+.wpcom-migration-container h1 {
+	margin: 0;
+	color: #101517;
+	font-family: Recoleta, "Noto Serif", Georgia, "Times New Roman", Times, serif;
+	font-size: 34px;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+/* Content */
+.wpcom-migration-content {
+	max-width: 436px;
+}
+
+/* Sidebar */
+.wpcom-migration-sidebar {
+	max-width: 340px;
+	padding: 40px;
+	border-radius: 4px;
+	background: #EFF1FC;
+	color: #000;
+}
+
+.wpcom-migration-sidebar p {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.wpcom-migration-sidebar h3 {
+	margin: 0;
+	color: inherit;
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+/* Form */
+.wpcom-migration-form button {
+	padding: 12px 24px;
+	border: 0;
+	border-radius: 4px;
+	color: #FDFDFD;
+	background: #3858E9;
+	cursor: pointer;
+}
+
+.wpcom-migration-form button:hover {
+	opacity: 0.8;
+}
+
+/* Input Group */
+.wpcom-migration-input-group {
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
+}
+
+.wpcom-migration-input-group label {
+	color: #000;
+	font-weight: 500;
+}
+
+.wpcom-migration-input-group input {
+	padding: 10px 16px;
+	margin: 6px 0 0;
+	line-height: initial;
+	border: 1px solid #C3C4C7;
+	border-radius: 2px;
+	box-shadow: none;
+}
+
+.wpcom-migration-input-group input[type='checkbox'] {
+	margin: 0;
+}
+
+.wpcom-migration-input-group--checkbox {
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+.wpcom-migration-input-group--checkbox label {
+	color: #50575E;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.wpcom-migration-input-group--checkbox label a {
+	color: #50575E;
+}
+
+.wpcom-migration-input-group--checkbox label a:hover {
+	color: #135e96;
+}
+
+/* Testimonial */
+.wpcom-migration-testimonial {
+	margin-top: 32px;
+}
+
+.wpcom-migration-testimonial__text {
+	color: #101517;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.7;
+}
+
+.wpcom-migration-testimonial__image {
+	width: 126px;
+	margin-top: 8px;
+}
+
+/* Misc */
+.wpcom-migration-section {
+	margin-top: 24px;
+}
+
+.wpcom-migration-cta-link {
+	display: flex;
+    align-items: center;
+	margin-top: 18px;
+	color: #101517;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.wpcom-migration-cta-link:after {
+	content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 0.5H8.5V2H12.94L6.97 7.97L8.03 9.03L14 3.06V7.5H15.5V0.5ZM2.5 1.5C1.96957 1.5 1.46086 1.71071 1.08579 2.08579C0.710714 2.46086 0.5 2.96957 0.5 3.5V13.5C0.5 14.0304 0.710714 14.5391 1.08579 14.9142C1.46086 15.2893 1.96957 15.5 2.5 15.5H12.5C13.0304 15.5 13.5391 15.2893 13.9142 14.9142C14.2893 14.5391 14.5 14.0304 14.5 13.5V10.5H13V13.5C13 13.6326 12.9473 13.7598 12.8536 13.8536C12.7598 13.9473 12.6326 14 12.5 14H2.5C2.36739 14 2.24021 13.9473 2.14645 13.8536C2.05268 13.7598 2 13.6326 2 13.5V3.5C2 3.36739 2.05268 3.24021 2.14645 3.14645C2.24021 3.05268 2.36739 3 2.5 3H5.5V1.5H2.5Z" fill="%23101517"/></svg>');
+	width: 16px;
+	height: 16px;
+	margin-left: 8px;
+}
+
+/* Media Queries */
 @media ( min-width: 961px ) {
 	.wpcom-migration-container {
 		padding-top: 100px;
+	}
+
+	.wpcom-migration-container h1 {
+		font-size: 44px;
+	}
+}
+
+@media ( min-width: 783px ) {
+	.wpcom-migration-container {
+		flex-direction: row;
+		align-items: start;
+	}
+}
+
+@media ( max-width: 782px ) {
+	/* Fix main content having extra padding on mobile. */
+	.toplevel_page_automattic.auto-fold #wpcontent {
+		padding-left: 0;
 	}
 }

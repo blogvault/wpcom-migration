@@ -124,6 +124,10 @@
 	box-shadow: none;
 }
 
+.wpcom-migration-input-group input::placeholder {
+	font-size: 16px;
+}
+
 .wpcom-migration-input-group input[type='checkbox'] {
 	flex: none;
 	margin: 0;

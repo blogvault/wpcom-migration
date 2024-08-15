@@ -124,6 +124,7 @@
 }
 
 .wpcom-migration-input-group input[type='checkbox'] {
+	flex: none;
 	margin: 0;
 }
 

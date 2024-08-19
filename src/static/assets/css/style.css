@@ -34,6 +34,7 @@
 	gap: 40px;
 	font-size: 14px;
 	color: var( --wpcom-migration-gray-70 );
+	text-underline-offset: 4px;
 }
 
 .wpcom-migration-container > * {
@@ -43,6 +44,10 @@
 .wpcom-migration-container p {
 	margin: 8px 0;
 	font-size: inherit;
+}
+
+.wpcom-migration-container a:hover {
+	color: var( --wpcom-migration-link-hover-color );
 }
 
 .wpcom-migration-container h1 {
@@ -66,15 +71,16 @@
  */
 .wpcom-migration-sidebar {
 	max-width: 340px;
-	padding: 40px;
-	border-radius: 4px;
-	background: var( --wpcom-migration-secondary-bg );
-	color: #000;
 }
 
 .wpcom-migration-sidebar p {
+	color: var( --wpcom-migration-gray-80 );
 	font-size: 12px;
 	line-height: 20px;
+}
+
+.wpcom-migration-sidebar a {
+	color: var( --wpcom-migration-gray-80 );
 }
 
 .wpcom-migration-sidebar h3 {
@@ -84,6 +90,17 @@
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.3;
+}
+
+.wpcom-migration-sidebar__inner {
+	padding: 40px;
+	border-radius: 4px;
+	color: #000;
+	background: var( --wpcom-migration-secondary-bg );
+}
+
+.wpcom-migration-sidebar__inner p {
+	color: #000;
 }
 
 /*
@@ -108,6 +125,9 @@
 .wpcom-migration-input-group {
 	display: flex;
 	flex-direction: column;
+}
+
+.wpcom-migration-input-group + .wpcom-migration-input-group {
 	margin-top: 16px;
 }
 
@@ -131,13 +151,7 @@
 
 .wpcom-migration-input-group input[type='checkbox'] {
 	flex: none;
-	margin: 0;
-}
-
-.wpcom-migration-input-group--checkbox {
-	flex-direction: row;
-	align-items: center;
-	gap: 12px;
+	margin: 0 12px 0 0;
 }
 
 .wpcom-migration-input-group--checkbox label {
@@ -146,12 +160,18 @@
 	line-height: 20px;
 }
 
-.wpcom-migration-input-group--checkbox label a {
+.wpcom-migration-input-group--checkbox a {
 	color: var( --wpcom-migration-gray-60 );
 }
 
-.wpcom-migration-input-group--checkbox label a:hover {
-	color: var( --wpcom-migration-link-hover-color );
+.wpcom-migration-input-info {
+	background: var( --wpcom-migration-gray-0 );
+	padding: 11px 16px;
+	border-radius: 0 0 2px 2px;
+}
+
+input:has(+ .wpcom-migration-input-info) {
+	border-radius: 2px 2px 0 0;
 }
 
 /*
@@ -193,11 +213,82 @@
 }
 
 /**
- * Misc
+ * Foldable
+ */
+.wpcom-migration-foldable__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.wpcom-migration-foldable__header:after {
+	content: "\f347";
+	font-family: dashicons;
+	font-size: 18px;
+}
+
+.wpcom-migration-foldable--expanded .wpcom-migration-foldable__header:after {
+	content: "\f343";
+}
+
+.wpcom-migration-foldable__title {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	color: var( --wpcom-migration-gray-80 );
+}
+
+.wpcom-migration-foldable__description {
+	line-height: 20px;
+	color: var( --wpcom-migration-gray-50 );
+}
+
+.wpcom-migration-foldable__body {
+	display: none;
+}
+
+.wpcom-migration-foldable--expanded .wpcom-migration-foldable__body {
+	display: block;
+}
+
+/**
+ * Section
  */
 .wpcom-migration-section {
 	margin-top: 24px;
 }
+
+.wpcom-migration-section__title {
+	margin-top: 8px;
+	color: #000;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.wpcom-migration-section__description {
+	color: var( --wpcom-migration-gray-50 );
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.wpcom-migration-section__inner {
+	padding: 12px 16px;
+	margin-top: 8px;
+	border-radius: 4px;
+	background: var( --wpcom-migration-gray-0 );
+}
+
+.wpcom-migration-section__inner .wpcom-migration-input-group--checkbox {
+	max-height: 200px;
+	padding-left: 1px;
+	gap: 16px;
+	overflow: auto;
+}
+
+/**
+ * Misc
+ */
 
 /* Fix main content having extra padding on mobile. */
 .toplevel_page_automattic.auto-fold #wpcontent {

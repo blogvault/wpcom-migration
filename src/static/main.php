@@ -17,12 +17,13 @@
 			<div class="wpcom-migration-section">
 				<div class="wpcom-migration-input-group">
 					<label for="wpcom-migration-email">Email address</label>
-					<input type="text" placeholder="Enter your email address for updates" id="wpcom-migration-email">
+					<input type="email" placeholder="Enter your email address for updates" id="wpcom-migration-email" required>
 				</div>
 
 				<div class="wpcom-migration-input-group wpcom-migration-input-group--checkbox">
-					<input type="checkbox" id="wpcom-migration-terms">
-					<label for="wpcom-migration-terms">I agree to BlogVault’s <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a></label>
+					<label>
+						<input type="checkbox" id="wpcom-migration-terms" required> I agree to BlogVault’s <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+					</label>
 				</div>
 			</div>
 
@@ -33,14 +34,16 @@
 	</main>
 
 	<aside class="wpcom-migration-sidebar">
-		<h3>Let us migrate your site for free</h3>
-		<p>Sit back and our experts will migrate your site for you. You'll get 50% off your first year, and you'll be up and running in no more than 2 business days.</p>
+		<div class="wpcom-migration-sidebar__inner">
+			<h3>Let us migrate your site for free</h3>
+			<p>Sit back and our experts will migrate your site for you. You'll get 50% off your first year, and you'll be up and running in no more than 2 business days.</p>
 
-		<a class="wpcom-migration-cta-link" href="https://wordpress.com/move/" target="_blank">Get your Free migration</a>
+			<a class="wpcom-migration-cta-link" href="https://wordpress.com/move/" target="_blank">Get your Free migration</a>
 
-		<div class="wpcom-migration-testimonial">
-			<div class="wpcom-migration-testimonial__text">Loved by our customers</div>
-			<img class="wpcom-migration-testimonial__image" src="<?php echo esc_url( plugins_url('../static/assets/images/testimonial.png', __FILE__ ) ); ?>" alt="testimonial" />
+			<div class="wpcom-migration-testimonial">
+				<div class="wpcom-migration-testimonial__text">Loved by our customers</div>
+				<img class="wpcom-migration-testimonial__image" src="<?php echo esc_url( plugins_url('../static/assets/images/testimonial.png', __FILE__ ) ); ?>" alt="testimonial" />
+			</div>
 		</div>
 	</aside>
 </div>

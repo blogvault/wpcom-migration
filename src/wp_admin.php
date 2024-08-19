@@ -87,6 +87,14 @@ class WPCOMWPAdmin {
 					[],
 					$this->bvinfo->version
 				);
+
+				wp_enqueue_script(
+					'bvwpcom-static-app',
+					plugins_url( 'static/assets/js/app.js', __FILE__ ),
+					[],
+					$this->bvinfo->version,
+					true
+				);
 			}
 		}
 	}

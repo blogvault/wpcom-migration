@@ -70,8 +70,82 @@
 	width: 100%;
 }
 
+.wpcom-migration-content-full-width strong {
+	font-weight: 500;
+}
+
+.wpcom-migration-container-full-width {
+	max-width: 656px;
+	margin: 40px auto;
+	text-align: center;
+}
+
 .wpcom-migration-content-full-width h1 {
 	text-align: center;
+}
+
+.wpcom-migration-content-header {
+	background-color: var(--wpcom-migration-gray-0);
+	padding: 60px 40px;
+	text-align: center;
+}
+
+.wpcom-migration-content-header__blogvault-logo img {
+	width: 172px;
+	height: 48px;
+}
+
+.wpcom-migration-content-header-site {
+	color: var(--wpcom-migration-primary-bg);
+	font-size: 18px;
+}
+
+/*
+ * Progress screen
+ */
+
+.wpcom-migration-progress {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+.wpcom-migration-progress-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.wpcom-migration-progress-section {
+	display: flex;
+	flex-direction: column;
+	margin-top: 12px;
+	width: 48%;
+}
+
+.wpcom-migration-progress > .wpcom-migration-progress-section:last-of-type {
+	width: 100%;
+}
+
+.wpcom-migration-progress-header {
+	font-weight: 500;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.wpcom-migration-progress-bar {
+	background: var(--wpcom-migration-gray-0);
+	border-radius: 4px;
+	height: 24px;
+	width: 100%;
+}
+
+.wpcom-migration-progress-bar-progress {
+	background: var(--wpcom-migration-primary-bg);
+	border-radius: 4px;
+	height: 100%;
 }
 
 /*
@@ -109,6 +183,20 @@
 
 .wpcom-migration-sidebar__inner p {
 	color: #000;
+}
+
+.wpcom-migration-cancel {
+	border: 1px solid var(--wpcom-migration-gray-10);
+	background: white;
+	color: var(--wpcom-migration-gray-100);
+	padding: 10px 24px;
+	border-radius: 4px;
+	margin-top: 40px;
+	cursor: pointer;
+}
+
+.wpcom-migration-cancel:hover {
+	opacity: 0.8;
 }
 
 /*

@@ -52,8 +52,21 @@
 				</div>
 			</div>
 		</div>
-		<button class="wpcom-migration-cancel">
-			Cancel migration
-		</button>
+		<div class="wpcom-migration-form">
+			<button class="secondary">
+				Cancel migration
+			</button>
+		</div>
 	</div>
 </main>
+
+<div class="wpcom-migration-modal">
+	<div class="wpcom-migration-modal-content">
+		<h1>Cancel migration</h1>
+		<p>If you cancel now, your site won't be migrated to WordPress.com. Are you sure you want to cancel?</p>
+	</div>
+	<div class="wpcom-migration-modal-buttons wpcom-migration-form">
+		<button class="secondary">No, continue migrating</button>
+		<button>Yes, cancel the migration</button>
+	</div>
+</div>

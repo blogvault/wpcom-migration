@@ -12,7 +12,7 @@
 <main class="wpcom-migration-content-full-width">
 	<div class="wpcom-migration-content-header">
 		<div class="wpcom-migration-content-header__blogvault_logo">
-			<img src="<?php echo esc_url( plugins_url('../static/assets/images/blogvault-logo-lg.png', __FILE__ ) ); ?>" alt="blogvault-logo">
+			<img src="<?php echo esc_url( plugins_url('../static/assets/images/blogvault-logo-large.png', __FILE__ ) ); ?>" alt="blogvault-logo">
 		</div>
 		<p class="wpcom-migration-content-header-site">We're migrating <strong>websitewithareallylongurl.com</strong> to WordPress.com</p>
 	</div>

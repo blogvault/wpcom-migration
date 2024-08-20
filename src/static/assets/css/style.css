@@ -86,11 +86,11 @@
 
 .wpcom-migration-content-header {
 	background-color: var(--wpcom-migration-gray-0);
-	padding: 60px 40px;
+	padding: 70px 40px;
 	text-align: center;
 }
 
-.wpcom-migration-content-header__blogvault-logo img {
+.wpcom-migration-content-header__blogvault_logo img {
 	width: 172px;
 	height: 48px;
 }
@@ -98,6 +98,8 @@
 .wpcom-migration-content-header-site {
 	color: var(--wpcom-migration-primary-bg);
 	font-size: 18px;
+	line-height: 26px;
+	margin: 8px 0;
 }
 
 /*
@@ -108,7 +110,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: sans-serif;
 }
 
 .wpcom-migration-progress-row {

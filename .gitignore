@@ -1,3 +1,4 @@
 wpcom-migration-plugin.zip
 .DS_Store
 .idea
+src/docker-compose.yml

@@ -77,6 +77,7 @@
 .wpcom-migration-container-full-width {
 	max-width: 656px;
 	margin: 40px auto;
+	padding: 0 20px;
 	text-align: center;
 }
 
@@ -86,7 +87,7 @@
 
 .wpcom-migration-content-header {
 	background-color: var(--wpcom-migration-gray-0);
-	padding: 70px 40px;
+	padding: 70px 20px;
 	text-align: center;
 }
 
@@ -115,8 +116,7 @@
 
 .wpcom-migration-progress-row {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	flex-direction: column;
 	width: 100%;
 }
 
@@ -124,7 +124,7 @@
 	display: flex;
 	flex-direction: column;
 	margin-top: 12px;
-	width: 48%;
+	width: 100%;
 }
 
 .wpcom-migration-progress > .wpcom-migration-progress-section:last-of-type {
@@ -504,5 +504,14 @@ input:has(+ .wpcom-migration-input-info) {
 	.wpcom-migration-container {
 		flex-direction: row;
 		align-items: start;
+	}
+
+	.wpcom-migration-progress-row {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.wpcom-migration-progress-section {
+		width: 48%;
 	}
 }

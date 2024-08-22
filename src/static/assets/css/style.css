@@ -331,16 +331,16 @@ input:has(+ .wpcom-migration-input-info) {
 	display: flex;
 	align-items: center;
 	margin-top: 18px;
-	color: var( --wpcom-migration-gray-100 );
+	color: var( --wpcom-migration-primary-bg );
 	font-weight: 500;
 	line-height: 1.4;
+	text-decoration: none;
 }
 
-.wpcom-migration-cta-link:after {
-	content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 0.5H8.5V2H12.94L6.97 7.97L8.03 9.03L14 3.06V7.5H15.5V0.5ZM2.5 1.5C1.96957 1.5 1.46086 1.71071 1.08579 2.08579C0.710714 2.46086 0.5 2.96957 0.5 3.5V13.5C0.5 14.0304 0.710714 14.5391 1.08579 14.9142C1.46086 15.2893 1.96957 15.5 2.5 15.5H12.5C13.0304 15.5 13.5391 15.2893 13.9142 14.9142C14.2893 14.5391 14.5 14.0304 14.5 13.5V10.5H13V13.5C13 13.6326 12.9473 13.7598 12.8536 13.8536C12.7598 13.9473 12.6326 14 12.5 14H2.5C2.36739 14 2.24021 13.9473 2.14645 13.8536C2.05268 13.7598 2 13.6326 2 13.5V3.5C2 3.36739 2.05268 3.24021 2.14645 3.14645C2.24021 3.05268 2.36739 3 2.5 3H5.5V1.5H2.5Z" fill="%23101517"/></svg>');
+.wpcom-migration-cta-link .dashicons-external {
 	width: 16px;
 	height: 16px;
-	margin-left: 8px;
+	margin-left: 6px;
 }
 
 /**

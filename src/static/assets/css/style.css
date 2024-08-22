@@ -46,8 +46,13 @@
 	font-size: inherit;
 }
 
+.wpcom-migration-container a {
+	color: var( --wpcom-migration-primary-bg );
+}
+
 .wpcom-migration-container a:hover {
 	color: var( --wpcom-migration-link-hover-color );
+	text-decoration: none;
 }
 
 .wpcom-migration-container a.wpcom-migration-link__support {

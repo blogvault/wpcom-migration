@@ -10,6 +10,6 @@
 	--wpcom-migration-gray-70: #3c434a;
 	--wpcom-migration-gray-80: #2c3338;
 	--wpcom-migration-gray-100: #101517;
-	--wpcom-migration-link-hover-color: #135e96;
 	--wpcom-migration-button-hover-color: #2145e6;
+	--wpcom-migration-link-hover-color: var( --wpcom-migration-button-hover-color );
 }

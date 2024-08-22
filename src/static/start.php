@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="wpcom-migration-header__blogvault-logo">
-		<img src="<?php echo esc_url( plugins_url('../assets/img/blogvault-logo.png', __FILE__ ) ); ?>" alt="blogvault-logo">
+		Powered by <img src="<?php echo esc_url( plugins_url('../assets/img/blogvault-logo.png', __FILE__ ) ); ?>" alt="blogvault-logo">
 	</div>
 </header>
 
@@ -56,6 +56,7 @@
 						<div class="wpcom-migration-section__title">Folders</div>
 						<div class="wpcom-migration-section__inner">
 							<div class="wpcom-migration-input-group wpcom-migration-input-group--checkbox">
+								<span class="checkmark"></span>&nbsp;
 								<label>
 									<input type="checkbox" checked disabled> ./wp-admin/
 								</label>

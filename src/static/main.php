@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="wpcom-migration-header__blogvault-logo">
-		<img src="<?php echo esc_url( plugins_url('../assets/img/blogvault-logo.png', __FILE__ ) ); ?>" alt="blogvault-logo">
+		Powered by <img src="<?php echo esc_url( plugins_url('../assets/img/blogvault-logo.png', __FILE__ ) ); ?>" alt="blogvault-logo">
 	</div>
 </header>
 

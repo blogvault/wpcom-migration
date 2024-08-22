@@ -75,9 +75,6 @@
 /*
  * Content
  */
-.wpcom-migration-content {
-	max-width: 436px;
-}
 
 .wpcom-migration-content-full-width {
 	width: 100%;
@@ -207,9 +204,6 @@
 /*
  * Sidebar
  */
-.wpcom-migration-sidebar {
-	max-width: 340px;
-}
 
 .wpcom-migration-sidebar p {
 	color: var( --wpcom-migration-gray-80 );
@@ -305,6 +299,11 @@
 .wpcom-migration-input-group input[type='checkbox'] {
 	flex: none;
 	margin: 0 12px 0 0;
+}
+
+.wpcom-migration-input-group input[type='checkbox']:checked {
+	background-color: var( --wpcom-migration-primary-bg );
+	color: white;
 }
 
 .wpcom-migration-input-group--checkbox label {
@@ -539,6 +538,14 @@ a.wpcom-migration-cta-link:hover {
 }
 
 @media ( min-width: 783px ) {
+	.wpcom-migration-content {
+		max-width: 436px;
+	}
+
+	.wpcom-migration-sidebar {
+		max-width: 340px;
+	}
+
 	.wpcom-migration-container {
 		flex-direction: row;
 		align-items: start;

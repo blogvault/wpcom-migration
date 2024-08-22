@@ -46,8 +46,21 @@
 	font-size: inherit;
 }
 
+.wpcom-migration-container a {
+	color: var( --wpcom-migration-primary-bg );
+}
+
 .wpcom-migration-container a:hover {
 	color: var( --wpcom-migration-link-hover-color );
+	text-decoration: none;
+}
+
+.wpcom-migration-container a.wpcom-migration-link__support {
+	color: var( --wpcom-migration-primary-bg );
+}
+
+.wpcom-migration-sidebar a:hover {
+	text-decoration: none;
 }
 
 .wpcom-migration-container h1 {
@@ -279,6 +292,10 @@
 	border: 1px solid var( --wpcom-migration-gray-10 );
 	border-radius: 2px;
 	box-shadow: none;
+}
+
+.wpcom-migration-input-group input[type=text]:focus {
+	z-index: 10;
 }
 
 .wpcom-migration-input-group input::placeholder {

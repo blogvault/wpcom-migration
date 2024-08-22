@@ -310,7 +310,19 @@
 
 .wpcom-migration-input-group input[type='checkbox']:checked {
 	background-color: var( --wpcom-migration-primary-bg );
+	border-color: var(--wpcom-migration-primary-bg);
 	color: white;
+}
+
+.wpcom-migration-input-group input[type=checkbox]:focus {
+	box-shadow: 0 0 0 1px var(--wpcom-migration-primary-bg);
+}
+
+.wpcom-migration-input-group input[type='checkbox']:checked:before {
+	content: '\2713';
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1.8rem;
 }
 
 .wpcom-migration-input-group--checkbox label {
@@ -563,5 +575,10 @@ a.wpcom-migration-cta-link:hover {
 
 	.wpcom-migration-progress-section {
 		width: 48%;
+	}
+
+	.wpcom-migration-input-group input[type='checkbox']:checked:before {
+		font-size: 16px;
+		line-height: 1.2rem;
 	}
 }

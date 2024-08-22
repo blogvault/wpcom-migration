@@ -301,6 +301,7 @@
 }
 
 .wpcom-migration-input-group--checkbox a:hover {
+	color: var( --wpcom-migration-primary-bg );
 	text-decoration: none;
 }
 

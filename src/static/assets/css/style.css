@@ -251,6 +251,7 @@
 }
 
 .wpcom-migration-form button.secondary:hover {
+	background-color: white;
 	border-color: var(--wpcom-migration-gray-50);
 }
 

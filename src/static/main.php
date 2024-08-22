@@ -38,10 +38,12 @@
 			<h3>Let us migrate your site for free</h3>
 			<p>Sit back and our experts will migrate your site for you. You'll get 50% off your first year, and you'll be up and running in no more than 2 business days.</p>
 
-			<a class="wpcom-migration-cta-link" href="https://wordpress.com/move/" target="_blank">
-				Get your Free migration
+			<div class="wpcom-migration-cta">
+				<a class="wpcom-migration-cta-link" href="https://wordpress.com/move/" target="_blank">
+					Get your Free migration
+				</a>
 				<span class="dashicons dashicons-external"></span>
-			</a>
+			</div>
 
 			<div class="wpcom-migration-testimonial">
 				<div class="wpcom-migration-testimonial__text">Loved by our customers</div>

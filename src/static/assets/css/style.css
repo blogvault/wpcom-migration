@@ -16,7 +16,13 @@
 	font-size: 24px;
 }
 
+.wpcom-migration-header__blogvault-logo {
+	display: flex;
+	align-items: center;
+}
+
 .wpcom-migration-header__blogvault-logo img {
+	margin-left: 8px;
 	height: 24px;
 }
 

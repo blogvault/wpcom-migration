@@ -50,6 +50,14 @@
 	color: var( --wpcom-migration-link-hover-color );
 }
 
+.wpcom-migration-container a.wpcom-migration-link__support {
+	color: var( --wpcom-migration-primary-bg );
+}
+
+.wpcom-migration-sidebar a:hover {
+	text-decoration: none;
+}
+
 .wpcom-migration-container h1 {
 	margin: 0;
 	color: var( --wpcom-migration-gray-100 );
@@ -279,6 +287,10 @@
 	border: 1px solid var( --wpcom-migration-gray-10 );
 	border-radius: 2px;
 	box-shadow: none;
+}
+
+.wpcom-migration-input-group input[type=text]:focus {
+	z-index: 10;
 }
 
 .wpcom-migration-input-group input::placeholder {

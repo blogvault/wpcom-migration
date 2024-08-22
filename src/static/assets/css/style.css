@@ -235,7 +235,7 @@
 	padding: 12px 24px;
 	border: 0;
 	border-radius: 4px;
-	color: #FDFDFD;
+	color: var( --wpcom-migration-white );
 	background: var( --wpcom-migration-primary-bg );
 	cursor: pointer;
 }
@@ -247,7 +247,11 @@
 }
 
 .wpcom-migration-form button:hover {
-	opacity: 0.8;
+	background-color: var( --wpcom-migration-primary-bg-hover );
+}
+
+.wpcom-migration-form button.secondary:hover {
+	border-color: var(--wpcom-migration-gray-50);
 }
 
 /*
@@ -293,6 +297,7 @@
 
 .wpcom-migration-input-group--checkbox a {
 	color: var( --wpcom-migration-gray-60 );
+	text-decoration: none;
 }
 
 .wpcom-migration-input-info {
@@ -341,6 +346,7 @@ input:has(+ .wpcom-migration-input-info) {
 	width: 16px;
 	height: 16px;
 	margin-left: 6px;
+	margin-bottom: 4px;
 }
 
 /**

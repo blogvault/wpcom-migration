@@ -352,7 +352,7 @@ input:has(+ .wpcom-migration-input-info) {
 	
 }
 
-.wpcom-migration-cta-link:hover {
+a.wpcom-migration-cta-link:hover {
 	color: var(--wpcom-migration-primary-bg);
 	text-decoration: none;
 }

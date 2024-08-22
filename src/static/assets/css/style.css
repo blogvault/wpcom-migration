@@ -578,7 +578,7 @@ a.wpcom-migration-cta-link:hover {
 	}
 
 	.wpcom-migration-input-group input[type='checkbox']:checked:before {
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 1.2rem;
 	}
 }

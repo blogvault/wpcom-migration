@@ -56,6 +56,7 @@
 						<div class="wpcom-migration-section__title">Folders</div>
 						<div class="wpcom-migration-section__inner">
 							<div class="wpcom-migration-input-group wpcom-migration-input-group--checkbox">
+								<span class="checkmark"></span>&nbsp;
 								<label>
 									<input type="checkbox" checked disabled> ./wp-admin/
 								</label>

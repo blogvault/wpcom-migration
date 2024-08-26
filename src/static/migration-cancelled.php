@@ -34,7 +34,5 @@
 				<img class="wpcom-migration-testimonial__image" src="<?php echo esc_url( plugins_url('../static/assets/images/testimonial.png', __FILE__ ) ); ?>" alt="testimonial" />
 			</div>
 		</div>
-
-		<p>Having trouble? <a href="" target="_blank">Let us take over</a></p>
 	</aside>
 </div>

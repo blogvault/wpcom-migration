@@ -185,7 +185,8 @@
 }
 .wpcom-migration-modal {
 	background: white;
-	width: 424px;
+	width: 100%;
+	max-width: 424px;
 	z-index: 999;
 	position: absolute;
 	top: 50%;
@@ -213,6 +214,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 24px;
+	gap: 16px;
 }
 .wpcom-migration-modal-buttons.wpcom-migration-form button {
 	border-radius: 2px;

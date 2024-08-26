@@ -331,10 +331,12 @@
 	line-height: 20px;
 }
 
+a.dark-link,
 .wpcom-migration-input-group--checkbox a {
 	color: var( --wpcom-migration-gray-60 );
 }
 
+a.dark-link:hover,
 .wpcom-migration-input-group--checkbox a:hover {
 	text-decoration: none;
 }

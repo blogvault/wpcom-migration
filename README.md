@@ -5,6 +5,7 @@
 The following urls can be used to access the various static HTML screens implemented by Automattic.
 
 * `/wp-admin/admin.php?page=automattic&static=main`
+* `/wp-admin/admin.php?page=automattic&static=migration-cancelled`
 * `/wp-admin/admin.php?page=automattic&static=migration-progress`
 * `/wp-admin/admin.php?page=automattic&static=migration-complete`
 * `/wp-admin/admin.php?page=automattic&static=start`

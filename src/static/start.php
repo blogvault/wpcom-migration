@@ -9,6 +9,13 @@
 </header>
 
 <div class="wpcom-migration-container">
+	<div class="wpcom-migration-notice wpcom-migration-notice--error">
+		<div class="wpcom-migration-notice__inner">
+			<div class="wpcom-migration-notice__message">We ran into a problem migrating your site</div>
+			<div class="wpcom-migration-notice__details">You can try again or <a href="" target="_blank">contact us</a> if you would like us to do it for you.</div>
+		</div>
+	</div>
+
 	<main class="wpcom-migration-content">
 		<h1>Start your migration</h1>
 		<p>Let's get started. Just drop your migration key below, customize your options in Advanced Settings, and you're all set.</p>

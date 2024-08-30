@@ -398,7 +398,7 @@ a.wpcom-migration-cta-link:hover {
 /**
  * Loading Ellipsis
  */
- .wpcom-migration__loading-ellipsis {
+.wpcom-migration__loading-ellipsis {
 	display: inline-block;
 	position: relative;
 	width: 80px;
@@ -431,9 +431,9 @@ a.wpcom-migration-cta-link:hover {
 			animation: wpcom-migration__loading-ellipsis-shrink 0.6s infinite;
 		}
 	}
- }
+}
 
- @keyframes wpcom-migration__loading-ellipsis-grow {
+@keyframes wpcom-migration__loading-ellipsis-grow {
 	0% {
 		transform: scale(0);
 	}

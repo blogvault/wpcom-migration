@@ -121,7 +121,7 @@ if (!class_exists('WPCOMAccount')) :
 			$accounts_by_pattern = array();
 			foreach ($accounts as $pubkey => $value) {
 				if (array_key_exists($search_key, $value) &&
-						WPCOMHelper::safePregMatch($search_pattern, $value[$search_key]) == 1) {
+					WPCOMHelper::safePregMatch($search_pattern, $value[$search_key]) == 1) {
 					$accounts_by_pattern[$pubkey] = $value;
 				}
 			}

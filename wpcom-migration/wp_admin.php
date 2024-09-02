@@ -48,7 +48,7 @@ class WPCOMWPAdmin {
 			$bname = $this->bvinfo->getBrandName();
 			$icon = $this->bvinfo->getBrandIcon();
 			add_menu_page($bname, $bname, 'manage_options', $this->bvinfo->plugname,
-					array($this, 'adminPage'), plugins_url($icon,  __FILE__ ));
+					array($this, 'adminPage'), $icon);
 		}
 	}
 
@@ -76,26 +76,9 @@ class WPCOMWPAdmin {
 
 	public function wpcomsecAdminMenu($hook) {
 		if ($hook === 'toplevel_page_automattic') {
-			wp_register_style('bvwpcom_form-styles', plugins_url('assets/css/style.css', __FILE__));
-			wp_enqueue_style('bvwpcommdil', plugins_url('assets/css/mdil.min.css', __FILE__));
-			wp_enqueue_style('bvwpcom_form-styles');
-
-			if ( $this->getStaticPage() ) {
-				wp_enqueue_style(
-					'bvwpcom-static-styles',
-					plugins_url( 'static/assets/css/style.css', __FILE__ ),
-					[],
-					$this->bvinfo->version
-				);
-
-				wp_enqueue_script(
-					'bvwpcom-static-app',
-					plugins_url( 'static/assets/js/app.js', __FILE__ ),
-					[],
-					$this->bvinfo->version,
-					true
-				);
-			}
+			wp_enqueue_style('wpcom-variables', plugins_url('assets/css/variables.css', __FILE__));
+			wp_enqueue_style('wpcom-styles', plugins_url('assets/css/style.css', __FILE__));
+			wp_enqueue_style('wpcom-fonts', plugins_url('assets/css/fonts.css', __FILE__));
 		}
 	}
 
@@ -115,10 +98,6 @@ class WPCOMWPAdmin {
 		return $this->bvinfo->webpage;
 	}
 
-	private function getStaticPage() {
-		return $_GET['static'] ?? null;
-	}
-
 	public function siteInfoTags() {
 		require_once dirname( __FILE__ ) . '/recover.php';
 		$secret = WPCOMRecover::defaultSecret($this->settings);
@@ -130,7 +109,7 @@ class WPCOMWPAdmin {
 				"<input type='hidden' name='plug' value='".esc_attr($this->bvinfo->plugname)."'/>\n".
 				"<input type='hidden' name='adminurl' value='".esc_attr($this->mainUrl())."'/>\n".
 				"<input type='hidden' name='bvversion' value='".esc_attr($this->bvinfo->version)."'/>\n".
-	 			"<input type='hidden' name='serverip' value='".esc_attr($_SERVER["SERVER_ADDR"])."'/>\n".
+				"<input type='hidden' name='serverip' value='".esc_attr($_SERVER["SERVER_ADDR"])."'/>\n".
 				"<input type='hidden' name='abspath' value='".esc_attr(ABSPATH)."'/>\n".
 				"<input type='hidden' name='secret' value='".esc_attr($secret)."'/>\n".
 				"<input type='hidden' name='public' value='".esc_attr($public)."'/>\n";
@@ -150,13 +129,7 @@ class WPCOMWPAdmin {
 	}
 
 	public function adminPage() {
-		$static_page = $this->getStaticPage();
-
-		if ( $static_page ) {
-			require_once __DIR__ . '/static/' . sanitize_file_name( $_GET[ 'static' ] ) . '.php';
-		} else {
-			require_once __DIR__ . '/admin/main_page.php';
-		}
+		require_once dirname( __FILE__ ) . '/admin/main_page.php';
 	}
 
 	public function initWhitelabel($plugins) {

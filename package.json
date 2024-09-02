@@ -2,6 +2,6 @@
 	"name": "wpcom-migration",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"create-zip": "zip -r -o wpcom-migration-plugin.zip src/*"
+		"create-zip": "zip -r -o wpcom-migration-plugin.zip wpcom-migration/*"
 	}
 }

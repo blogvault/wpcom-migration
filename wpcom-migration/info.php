@@ -16,7 +16,7 @@ if (!class_exists('WPCOMInfo')) :
 		public $slug = 'wpcom-migration/wpcom_migration.php';
 		public $plug_redirect = 'wpcomredirect';
 		public $logo = '../assets/img/wordpress.com.png';
-		public $brand_icon = '/assets/img/favicon.ico';
+		public $brand_icon = 'dashicons-wordpress';
 		public $services_option_name = 'BVSERVICESOPTIONNAME';
 		public $author = 'WordPress.com';
 		public $title = 'WordPress.com Migration';

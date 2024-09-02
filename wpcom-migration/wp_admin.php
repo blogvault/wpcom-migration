@@ -46,8 +46,9 @@ class WPCOMWPAdmin {
 		$brand = $this->bvinfo->getBrandInfo();
 		if (!is_array($brand) || (!array_key_exists('hide', $brand) && !array_key_exists('hide_from_menu', $brand))) {
 			$bname = $this->bvinfo->getBrandName();
+			$icon = $this->bvinfo->getBrandIcon();
 			add_menu_page($bname, $bname, 'manage_options', $this->bvinfo->plugname,
-					array($this, 'adminPage'), 'dashicons-wordpress');
+					array($this, 'adminPage'), $icon);
 		}
 	}
 
@@ -78,7 +79,6 @@ class WPCOMWPAdmin {
 			wp_enqueue_style('wpcom-variables', plugins_url('assets/css/variables.css', __FILE__));
 			wp_enqueue_style('wpcom-styles', plugins_url('assets/css/style.css', __FILE__));
 			wp_enqueue_style('wpcom-fonts', plugins_url('assets/css/fonts.css', __FILE__));
-			wp_enqueue_script('wpcom-app', plugins_url('assets/js/app.js', __FILE__), array(), false, true);
 		}
 	}
 

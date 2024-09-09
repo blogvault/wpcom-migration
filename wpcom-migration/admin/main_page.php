@@ -22,7 +22,7 @@
 
 				<div class="wpcom-migration-input-group wpcom-migration-input-group--checkbox">
 					<label>
-						<input type="checkbox" id="wpcom-migration-terms" name="consent" required onchange="document.getElementById('migratesubmit').disabled = !this.checked;" value="1">
+						<input type="checkbox" id="wpcom-migration-terms" name="consent" required value="1">
 						<span class="checkmark"></span>
 						I agree to BlogVault's&nbsp;
 						<a href="https://blogvault.net/tos/">Terms & Conditions</a>
@@ -36,7 +36,23 @@
 				<input type="hidden" name="bvsrc" value="wpplugin" />
 				<input type="hidden" name="migrate" value="automattic" />
 				<?php echo $this->siteInfoTags(); ?>
-				<button type="submit" id="migratesubmit" disabled>Continue</button>
+				<button type="submit" id="migratesubmit">Continue</button>
+			</div>
+
+			<div class="wpcom-migration-key-section">
+				<h3>Migration in progress?</h3>
+				<p>Grab your key here.</p>
+
+				<div class="wpcom-migration-input-group">
+					<label for="wpcom-migration-email">Migration Key</label>
+					<div class="wpcom-migration-key-input-wrapper">
+						<div class="wpcom-migration-key-input">
+							<input type="password" id="wpcom-migration-key" value="<?php echo esc_attr( $this->bvinfo->getConnectionKey() ); ?>">
+							<span id="wpcom-toggle-key-visibility" class="dashicons dashicons-hidden"></span>
+						</div>
+						<button type="button" id="wpcom-copy-key" class="secondary" onclick="copyToClipboard()">Copy Key</button>
+					</div>
+				</div>
 			</div>
 		</form>
 	</main>
@@ -60,3 +76,29 @@
 		</div>
 	</aside>
 </div>
+
+<script>
+	function copyToClipboard() {
+		var copyText = document.getElementById("wpcom-migration-key");
+		copyText.type = 'text';
+		copyText.select();
+		document.execCommand("copy");
+		copyText.blur();
+		copyText.type = 'password';
+		var copyButton = document.getElementById("wpcom-copy-key");
+		copyButton.textContent = 'Copied!';
+		setTimeout(() => copyButton.textContent = 'Copy Key', 2000);
+	}
+	document.getElementById('wpcom-toggle-key-visibility').addEventListener('click', function() {
+		var keyField = document.getElementById("wpcom-migration-key");
+		if (keyField.type === "password") {
+			keyField.type = "text";
+			this.classList.remove('dashicons-hidden');
+			this.classList.add('dashicons-visibility');
+		} else {
+			keyField.type = "password";
+			this.classList.remove('dashicons-visibility');
+			this.classList.add('dashicons-hidden');
+		}
+	});
+</script>

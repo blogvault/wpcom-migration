@@ -25,7 +25,7 @@ Move your WordPress site to WordPress.com without stress, with the Migrate to Wo
 
 == Why WordPress.com? ==
 
-Migrating your site to WordPress.com gives you access to unparalleled managed WordPress hosting, with the added bonus of unmetered bandwidth, traffic, and visitors. 
+Migrating your site to WordPress.com gives you access to unparalleled managed WordPress hosting, with the added bonus of unmetered bandwidth, traffic, and visitors.
 
 Whether you’re scaling your business, expanding your online presence, or simply seeking a more reliable hosting solution, WordPress.com has everything you need to succeed—backed by 24/7 expert support and security.
 

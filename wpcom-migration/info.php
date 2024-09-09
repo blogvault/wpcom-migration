@@ -5,8 +5,8 @@ if (!class_exists('WPCOMInfo')) :
 	class WPCOMInfo {
 		public $settings;
 		public $config;
-		public $plugname = 'automattic';
-		public $brandname = 'WordPress.com';
+		public $plugname = 'wpcom-migration';
+		public $brandname = 'Migrate to WordPress.com';
 		public $badgeinfo = 'wpcombadge';
 		public $ip_header_option = 'wpcomipheader';
 		public $brand_option = 'wpcombrand';
@@ -16,7 +16,7 @@ if (!class_exists('WPCOMInfo')) :
 		public $slug = 'wpcom-migration/wpcom_migration.php';
 		public $plug_redirect = 'wpcomredirect';
 		public $logo = '../assets/img/wordpress.com.png';
-		public $brand_icon = 'dashicons-wordpress';
+		public $brand_icon = '/assets/img/menu-icon.svg';
 		public $services_option_name = 'BVSERVICESOPTIONNAME';
 		public $author = 'WordPress.com';
 		public $title = 'WordPress.com Migration';

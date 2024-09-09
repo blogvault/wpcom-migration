@@ -1,6 +1,9 @@
 @import 'variables.css';
 @import 'fonts.css';
 
+body {
+	background: #ffffff;
+}
 /*
  * Header
  */
@@ -505,6 +508,41 @@ a.wpcom-migration-cta-link:hover {
 	margin-top: 24px;
 }
 
+.wpcom-migration-key-section {
+  margin-top: 36px;
+}
+
+.wpcom-migration-key-section h3 {
+	margin-bottom: unset;
+}
+
+.wpcom-migration-key-section .wpcom-migration-key-input-wrapper {
+	display: flex;
+	align-items: center;
+	flex-flow: wrap;
+	margin: 8px 0 0;
+	gap: 10px;
+}
+
+.wpcom-migration-key-section .wpcom-migration-key-input-wrapper .wpcom-migration-key-input {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	position: relative;
+}
+
+.wpcom-migration-key-section .wpcom-migration-key-input-wrapper .wpcom-migration-key-input input {
+	padding-right: 45px;
+	flex-grow: 1;
+	margin: unset;
+}
+
+.wpcom-migration-key-section .wpcom-migration-key-input-wrapper .wpcom-migration-key-input #wpcom-toggle-key-visibility {
+	cursor: pointer;
+	position: absolute;
+	right: 15px;
+}
+
 .wpcom-migration-section__title {
 	margin-top: 8px;
 	color: #000;
@@ -537,7 +575,7 @@ a.wpcom-migration-cta-link:hover {
  */
 
 /* Fix main content having extra padding on mobile. */
-.toplevel_page_automattic.auto-fold #wpcontent {
+.toplevel_page_wpcom-migration.auto-fold #wpcontent {
 	padding-left: 0;
 }
 

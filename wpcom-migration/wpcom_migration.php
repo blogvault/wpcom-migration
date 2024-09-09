@@ -9,7 +9,7 @@ Version: 5.65
 Network: True
  */
 
-/*  Copyright 2017  WordPress.com  (email : support@blogvault.net)
+/*  Copyright 2017  Migrate to WordPress.com  (email : support@blogvault.net)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -55,7 +55,7 @@ register_activation_hook(__FILE__, array($wp_action, 'activate'));
 register_deactivation_hook(__FILE__, array($wp_action, 'deactivate'));
 
 add_action('wp_footer', array($wp_action, 'footerHandler'), 100);
-add_action('clear_bv_services_config', array($wp_action, 'clear_bv_services_config'));
+add_action('wpcom_clear_bv_services_config', array($wp_action, 'clear_bv_services_config'));
 ##SOADDUNINSTALLACTION##
 
 ##DISABLE_OTHER_OPTIMIZATION_PLUGINS##
@@ -96,7 +96,7 @@ if ($bvinfo->hasValidDBVersion()) {
 	##MAINTENANCEMODULE##
 }
 
-if ((array_key_exists('bvplugname', $_REQUEST)) && ($_REQUEST['bvplugname'] == "automattic")) {
+if ((array_key_exists('bvplugname', $_REQUEST)) && ($_REQUEST['bvplugname'] == "wpcom-migration")) {
 	require_once dirname( __FILE__ ) . '/callback/base.php';
 	require_once dirname( __FILE__ ) . '/callback/response.php';
 	require_once dirname( __FILE__ ) . '/callback/request.php';

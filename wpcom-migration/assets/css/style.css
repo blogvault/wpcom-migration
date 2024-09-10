@@ -535,12 +535,14 @@ a.wpcom-migration-cta-link:hover {
 	padding-right: 45px;
 	flex-grow: 1;
 	margin: unset;
+	background: unset;
 }
 
 .wpcom-migration-key-section .wpcom-migration-key-input-wrapper .wpcom-migration-key-input #wpcom-toggle-key-visibility {
 	cursor: pointer;
 	position: absolute;
 	right: 15px;
+	z-index: 11;
 }
 
 .wpcom-migration-section__title {

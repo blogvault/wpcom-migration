@@ -47,7 +47,7 @@
 					<label for="wpcom-migration-email">Migration Key</label>
 					<div class="wpcom-migration-key-input-wrapper">
 						<div class="wpcom-migration-key-input">
-							<input type="password" id="wpcom-migration-key" value="<?php echo esc_attr( $this->bvinfo->getConnectionKey() ); ?>">
+							<input type="password" id="wpcom-migration-key" value="<?php echo esc_attr( $this->bvinfo->getConnectionKey() ); ?>" readonly>
 							<span id="wpcom-toggle-key-visibility" class="dashicons dashicons-hidden"></span>
 						</div>
 						<button type="button" id="wpcom-copy-key" class="secondary" onclick="copyToClipboard()">Copy Key</button>
@@ -80,13 +80,16 @@
 <script>
 	function copyToClipboard() {
 		var copyText = document.getElementById("wpcom-migration-key");
+		var copyButton = document.getElementById("wpcom-copy-key");
+		var toggleIcon = document.getElementById("wpcom-toggle-key-visibility");
 		copyText.type = 'text';
 		copyText.select();
 		document.execCommand("copy");
 		copyText.blur();
 		copyText.type = 'password';
-		var copyButton = document.getElementById("wpcom-copy-key");
 		copyButton.textContent = 'Copied!';
+		toggleIcon.classList.remove('dashicons-visibility');
+		toggleIcon.classList.add('dashicons-hidden');
 		setTimeout(() => copyButton.textContent = 'Copy Key', 2000);
 	}
 	document.getElementById('wpcom-toggle-key-visibility').addEventListener('click', function() {
@@ -100,5 +103,6 @@
 			this.classList.remove('dashicons-visibility');
 			this.classList.add('dashicons-hidden');
 		}
+		event.preventDefault();
 	});
 </script>

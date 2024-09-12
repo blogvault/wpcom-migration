@@ -25,9 +25,9 @@
 						<input type="checkbox" id="wpcom-migration-terms" name="consent" required value="1">
 						<span class="checkmark"></span>
 						I agree to BlogVault's&nbsp;
-						<a href="https://blogvault.net/tos/">Terms & Conditions</a>
+						<a href="https://blogvault.net/tos/" target="_blank" rel="noreferrer">Terms & Conditions</a>
 						&nbsp;and&nbsp;
-						<a href="https://blogvault.net/privacy/">Privacy Policy</a>
+						<a href="https://blogvault.net/privacy/" target="_blank" rel="noreferrer">Privacy Policy</a>
 					</label>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 			<p>Sit back and our experts will migrate your site for you. You'll get 50% off your first year, and you'll be up and running in no more than 2 business days.</p>
 
 			<div class="wpcom-migration-cta">
-				<a class="wpcom-migration-cta-link" href="https://wordpress.com/move/" target="_blank">
+				<a class="wpcom-migration-cta-link" href="https://wordpress.com/move/" target="_blank" rel="noreferrer">
 					Get your Free migration
 				</a>
 				<span class="dashicons dashicons-external"></span>
@@ -103,6 +103,5 @@
 			this.classList.remove('dashicons-visibility');
 			this.classList.add('dashicons-hidden');
 		}
-		event.preventDefault();
 	});
 </script>

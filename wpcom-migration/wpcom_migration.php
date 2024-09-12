@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WordPress.com Migration
+Plugin Name: Migrate to WordPress.com
 Plugin URI: https://www.wordpress.com
 Description: The easiest way to migrate your site to WordPress.com.
 Author: WordPress.com

@@ -19,7 +19,7 @@ if (!class_exists('WPCOMInfo')) :
 		public $brand_icon = '/assets/img/menu-icon.svg';
 		public $services_option_name = 'BVSERVICESOPTIONNAME';
 		public $author = 'WordPress.com';
-		public $title = 'WordPress.com Migration';
+		public $title = 'Migrate to WordPress.com';
 
 		const DB_VERSION = '4';
 
